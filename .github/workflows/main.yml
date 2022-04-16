@@ -1,0 +1,19 @@
+name: Cucumber CI
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Pre run
+        uses: actions/checkout@v2
+        uses: actions/setup-node@v2
+        run: npm install     
+          
+      - name: Cypress run
+        run: npx cypress run
+
+      - name: Publish Artifact
+        uses: actions/upload-artifact@v2
+        with: 
+          name: tests-report
+          path: report

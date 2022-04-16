@@ -1,0 +1,10 @@
+{
+    "testFiles": "**/*.{feature,features}",
+    "reporter": "cypress-mochawesome-reporter",
+    "reporterOptions": {
+      "reportDir": "report",
+      "charts": true,
+      "reportPageTitle": "tests-report"
+    },
+    "video": false
+}
