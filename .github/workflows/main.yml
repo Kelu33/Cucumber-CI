@@ -4,8 +4,10 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     steps: 
-      - name: Pre run
+      - name: Checkout
         uses: actions/checkout@v2
+
+      - name: Install
         uses: actions/setup-node@v2
         run: npm install     
           
