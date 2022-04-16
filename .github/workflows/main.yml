@@ -12,8 +12,8 @@ jobs:
           
       - name: Cypress run
         run: |
-        npm install
-        npx cypress run
+          npm install
+          npx cypress run
 
       - name: Publish Artifact
         uses: actions/upload-artifact@v2
