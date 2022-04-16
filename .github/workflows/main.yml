@@ -6,12 +6,13 @@ jobs:
     steps: 
       - name: Checkout
         uses: actions/checkout@v2
+
+      - name: Install
+        uses: actions/setup-node@v2
+        run: npm install     
           
       - name: Cypress run
-        uses: cypress-io/github-action@v2
-        with:
-          build: npm install
-          start: npx cypress run
+        run: npx cypress run
 
       - name: Publish Artifact
         uses: actions/upload-artifact@v2
