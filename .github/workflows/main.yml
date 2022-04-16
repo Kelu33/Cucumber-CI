@@ -10,8 +10,8 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          build: npm run build
-          start: npm start
+          build: npm install
+          start: npx cypress run
 
       - name: Publish Artifact
         uses: actions/upload-artifact@v2
